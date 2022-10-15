@@ -16,9 +16,9 @@ class BreweryClientTest {
     @Autowired
     BreweryClient breweryClient;
 
-   @Test
-   void getBeerById() {
-        BeerDto beerDto = this.breweryClient.getBeerById(UUID.randomUUID());
+    @Test
+    void testGetApi() {
+        BeerDto beerDto = this.breweryClient.getBeerById(UUID.fromString("b0e011ff-1baf-4791-aa85-39111a7ce65a"));
         assertNotNull(beerDto);
     }
 }
